@@ -4,9 +4,11 @@ import numpy as np
 from tqdm import tqdm
 import pickle
 import csv
+import torch
+from model import CNN
 
 
-REBUILD_DATA = True
+REBUILD_DATA = False
 
 
 class Fashion:
@@ -63,3 +65,9 @@ class Fashion:
 if REBUILD_DATA:
     test = Fashion()
     test.make_training_data()
+
+with open('parrot.pkl', 'rb') as f:
+    my_new_list = pickle.load(f)
+
+model = torch.load('model.pth')
+
