@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+fashion-mnist_test.csv
+fashion-mnist_train.csv
